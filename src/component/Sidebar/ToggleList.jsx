@@ -18,7 +18,7 @@ const ToggleList = (props) => {
           props.area.children.map((store) => {
             return (
               <li>
-                <Link to={`/uniqlo-store-map/${store.id}`}>
+                <Link to={`/${store.id}`}>
                   {store.storeName}
                 </Link>
               </li>
