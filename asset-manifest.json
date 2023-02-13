@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/uniqlo-store-map/static/css/main.7729fbd8.css",
-    "main.js": "/uniqlo-store-map/static/js/main.6eee7a49.js",
+    "main.js": "/uniqlo-store-map/static/js/main.538c905a.js",
     "index.html": "/uniqlo-store-map/index.html",
     "main.7729fbd8.css.map": "/uniqlo-store-map/static/css/main.7729fbd8.css.map",
-    "main.6eee7a49.js.map": "/uniqlo-store-map/static/js/main.6eee7a49.js.map"
+    "main.538c905a.js.map": "/uniqlo-store-map/static/js/main.538c905a.js.map"
   },
   "entrypoints": [
     "static/css/main.7729fbd8.css",
-    "static/js/main.6eee7a49.js"
+    "static/js/main.538c905a.js"
   ]
 }
