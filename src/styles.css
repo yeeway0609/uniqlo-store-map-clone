@@ -1,0 +1,21 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  background: #e6e6e6;
+}
+h1,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
