@@ -7,7 +7,7 @@ import App from "./App";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <BrowserRouter basename="/uniqlo-store-map">
+    <BrowserRouter basename="/uniqlo-store-map"> {/* 為了部署到GitHub Pages上，要加上basename */}
       <App />
     </BrowserRouter>
   </StrictMode>,
