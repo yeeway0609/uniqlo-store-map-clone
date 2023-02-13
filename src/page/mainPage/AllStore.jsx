@@ -18,7 +18,7 @@ const AllStore = () => {
                   return (
                     <li>
                       <p>
-                        <Link to={`/${store.id}`} >
+                        <Link to={`/uniqlo-store-map/${store.id}`} >
                           {store.storeName}
                         </Link>
                         <StyledSpan isTagged={store.tag === "" ? false : true} >

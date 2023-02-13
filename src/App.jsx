@@ -12,7 +12,7 @@ export default function App() {
   return (
     <StyledWrapper>
       <StyledHeader id="top">
-        <Link to="/">
+        <Link to="/uniqlo-store-map">
           <img src={Logo} alt="logo" />
         </Link>
       </StyledHeader>
@@ -21,8 +21,8 @@ export default function App() {
         <div className="content">
           <h1 style={{ backgroundColor: "#fff", padding: 20, marginBottom: 20 }} >店舖資訊</h1>
           <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/:areaID/:storeID" element={<StorePage data={Data} />} />
+            <Route path="/uniqlo-store-map" element={<MainPage />} />
+            <Route path="/uniqlo-store-map/:areaID/:storeID" element={<StorePage data={Data} />} />
           </Routes>
         </div>
       </StyledMain>
