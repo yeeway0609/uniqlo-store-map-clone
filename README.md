@@ -1,5 +1,8 @@
 # UNIQLO店舗資訊地圖切版練習
 
+## Reference
+https://www.uniqlo.com/tw/stores/
+
 ## Framework
 React
 
