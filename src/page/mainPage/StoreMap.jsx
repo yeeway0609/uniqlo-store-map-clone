@@ -1,37 +1,31 @@
 import { useState } from "react";
 import styled from "styled-components";
-import MapRender from "../../component/Map";
-import Data from "../../data/data"
+import MapRender from "../../component/MapRender";
+import Data from "../../data/data";
 
+// When you click a store, the state of mapAddress will be changed and MapRender will rerender.
 const StoreMap = () => {
   const [mapAddress, setMapAddress] = useState("桃園市八德區介壽路一段555號");
 
   return (
     <StyledStoreMap>
       <MapRender address={mapAddress} />
-      {
-        Data.map((area) => {
-          return (
-            <StyledMapList>
-              <p>{area.area}</p>
-              <ul>
-                {
-                  area.children.map((store) => {
-                    return (
-                      <li onClick={() => {
-                        setMapAddress(store.address);
-                      }}>
-                        {store.storeName}
-                      </li>
-                      // 按下此li時，setMapAddress會將mapAddress改成點擊時店名的地址，進而改變MapReender裡的Google map
-                    );
-                  })
-                }
-              </ul>
-            </StyledMapList>
-          );
-        })
-      }
+      {Data.map((Area) => {
+        return (
+          <StyledMapList>
+            <p>{Area.area}</p>
+            <ul>
+              {Area.children.map((store) => {
+                return (
+                  <li onClick={() => {setMapAddress(store.address);}}>
+                    {store.storeName}
+                  </li>
+                );
+              })}
+            </ul>
+          </StyledMapList>
+        );
+      })}
     </StyledStoreMap>
   );
 };
@@ -62,5 +56,3 @@ const StyledMapList = styled.div`
     cursor: pointer;
   }
 `;
-
-

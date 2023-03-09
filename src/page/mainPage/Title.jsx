@@ -8,7 +8,7 @@ const Title = (props) => {
       top: 0,
       behavior: "smooth"
     });
-  }; // 滑順地捲動到網頁頂端
+  };
 
   return (
     <StyledTitle id={props.titleID}>

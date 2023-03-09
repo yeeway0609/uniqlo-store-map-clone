@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import Data from "../../data/data"
-import ToggleList from "./ToggleList"
+import Data from "../../data/data";
+import ToggleList from "./ToggleList";
 
 const Sidebar = () => {
   return (
     <StyledSidebar>
       <ul>
-        {
-          Data.map((data) => {
-            return (
-              <ToggleList area={data} />
-            );
-          })
-        }
+        {Data.map((value) => {
+          return <ToggleList area={value} />;
+        })}
       </ul>
     </StyledSidebar>
   );

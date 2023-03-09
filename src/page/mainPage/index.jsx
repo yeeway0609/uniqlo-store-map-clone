@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Data from "../../data/data"
+import Data from "../../data/data";
 import StoreMap from "./StoreMap";
 import AllStore from "./AllStore";
 import Title from "./Title";
@@ -8,25 +8,23 @@ import Title from "./Title";
 const MainPage = () => {
   return (
     <>
-    <StyledNavbar>
-      <ul>
-        {
-          Data.map((area) => {
+      <StyledNavbar>
+        <ul>
+          {Data.map((area) => {
             return (
               <li>
-                <a href={`#${area.id}`} >{area.area}</a>
+                <a href={`#${area.id}`}>{area.area}</a>
               </li>
             );
-          })
-        }
-        <li>
-          <a href="#StoreMap">店舖地圖</a>
-        </li>
-      </ul>
-    </StyledNavbar>
-    <AllStore />
-    <Title titleID="StoreMap" titleName="店鋪地圖" />
-    <StoreMap />
+          })}
+          <li>
+            <a href="#StoreMap">店舖地圖</a>
+          </li>
+        </ul>
+      </StyledNavbar>
+      <AllStore />
+      <Title titleID="StoreMap" titleName="店鋪地圖" />
+      <StoreMap />
     </>
   );
 };
@@ -63,4 +61,3 @@ const StyledNavbar = styled.div`
     color: rgba(255 0 0);
   }
 `;
-

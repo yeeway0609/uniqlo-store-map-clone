@@ -1,43 +1,36 @@
-import styled from "styled-components";
-import Data from "../../data/data"
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Data from "../../data/data";
 import Title from "./Title";
 
+// Display all store under the specific area.
 const AllStore = () => {
   return (
     <>
-    {
-      Data.map((area) => {
+      {Data.map((Area) => {
         return (
           <>
-          <Title titleID={area.id} titleName={area.area} />
-          <StyledStoreList>
-            <ul>
-              {
-                area.children.map((store) => {
+            <Title titleID={Area.id} titleName={Area.area} />
+            <StyledStoreList>
+              <ul>
+                {Area.children.map((store) => {
                   return (
                     <li>
                       <p>
-                        <Link to={`/${store.id}`} >
-                          {store.storeName}
-                        </Link>
-                        <StyledSpan isTagged={store.tag === "" ? false : true} >
-                          {store.tag}
-                        </StyledSpan>
+                        <Link to={`/${store.id}`}>{store.storeName}</Link>
+                        <StyledSpan isTagged={store.tag === "" ? false : true}>{store.tag}</StyledSpan>
                       </p>
                       <p>電話: {store.tel}</p>
                       <p>地址: {store.address}</p>
                       <p>販售系列: {store.series}</p>
                     </li>
                   );
-                })
-              }
-            </ul>
-          </StyledStoreList>
+                })}
+              </ul>
+            </StyledStoreList>
           </>
         );
-      })
-    }
+      })}
     </>
   );
 };
@@ -52,11 +45,11 @@ const StyledStoreList = styled.div`
     display: flex;
     flex-wrap: wrap;
   }
-  & > ul > li{
+  & > ul > li {
     width: 50%;
     margin-bottom: 30px;
   }
-  & > ul > li > p{
+  & > ul > li > p {
     font-size: 13px;
     line-height: 2;
     padding: 0;
@@ -80,5 +73,3 @@ const StyledSpan = styled.span`
     }
   }}
 `;
-
-

@@ -1,4 +1,4 @@
-// exemple https://www.uniqlo.com/tw/stores/
+// reference: https://www.uniqlo.com/tw/stores/
 import "./styles.css";
 import { Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
@@ -18,7 +18,7 @@ export default function App() {
       </StyledHeader>
       <StyledMain>
         <Sidebar />
-        <div className="content">
+        <div style={{ width: 800 }}>
           <h1 style={{ backgroundColor: "#fff", padding: 20, marginBottom: 20 }} >店舖資訊</h1>
           <Routes>
             <Route path="/" element={<MainPage />} />
@@ -54,7 +54,4 @@ const StyledMain = styled.div`
   align-items: flex-start;
   padding-top: 20px;
   min-width: 1000px;
-  & > .content {
-    width: 800px;
-  }
 `;
