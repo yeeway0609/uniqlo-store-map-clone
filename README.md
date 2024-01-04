@@ -10,7 +10,7 @@ React
 React router, Styled Components, Font Awesome
 
 ## Demo
-[GitHub Pages](https://yeeway0609.github.io/uniqlo-store-map/)
+[GitHub Pages](https://yeeway0609.github.io/uniqlo-store-map-clone/)
 
 ## Preview
 ![](public/preview.png)
